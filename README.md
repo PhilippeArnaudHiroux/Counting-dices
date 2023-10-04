@@ -28,3 +28,10 @@ blur = cv2.GaussianBlur(grayImage, kernel_size, 0)
 cv2.imshow("Gausian", blur)
 ```
 
+## Edge detection
+<p>To make it easier to detect circles, we use the cv2.canny function to detect the edges</p>
+
+```py
+edges = cv2.Canny(blur, threshold1=30, threshold2=100)
+cv2.imshow("edges", edges)
+```
