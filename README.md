@@ -35,3 +35,30 @@ cv2.imshow("Gausian", blur)
 edges = cv2.Canny(blur, threshold1=30, threshold2=100)
 cv2.imshow("edges", edges)
 ```
+
+## Circle detection
+<p>With the cv2.HoughCircles function its possible to find circles. Every circle will have three parameters: a x coordinate, a y coordinate and a radius.<br>
+The cv2.circle function is used twice. The first time it will draw the circle on the original image, and the second time it puts a dot in the middle of the circle.</p>
+
+```py
+detected_circles = cv2.HoughCircles(edges, cv2.HOUGH_GRADIENT, 1, 20, param1 = 50,  param2 = 21, minRadius = 1, maxRadius = 50)
+
+if detected_circles is not None:
+
+    detected_circles = np.uint16(np.around(detected_circles))
+    for pt in detected_circles[0, :]:
+        a, b, r = pt[0], pt[1], pt[2]
+  
+        cv2.circle(img, (a, b), r, (0, 255, 0), 2)
+  
+        cv2.circle(img, (a, b), 1, (0, 0, 255), 3)
+
+        cv2.imshow("Detected Circle", img)
+```
+
+## Print out size
+<p>At the end we print out the size by dividing the detected_circles array by three</p>
+
+```py
+print(detected_circles.size/3)
+```
