@@ -63,4 +63,11 @@ if detected_circles is not None:
 print(detected_circles.size/3)
 ```
 
+# Some problems
+* If the color of the die and the color of the dots are not different enough, no edges may be detected
+* If the die is too large, the dots may not be detected. This can be resolved by increasing the maxRadius in the cv2.HoughCircles function. But then the program makes more mistakes on the small dice
+
 # Sources
+https://www.geeksforgeeks.org/python-opencv-cv2-blur-method/
+https://thepythoncode.com/article/canny-edge-detection-opencv-python?utm_content=cmp-true
+https://docs.opencv.org/4.x/d4/d13/tutorial_py_filtering.html

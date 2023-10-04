@@ -21,7 +21,7 @@ edges = cv2.Canny(blur, threshold1=30, threshold2=100)
 cv2.imshow("edges", edges)
 
 #Detect the circles on the edges image
-detected_circles = cv2.HoughCircles(edges, cv2.HOUGH_GRADIENT, 1, 20, param1 = 50,  param2 = 21, minRadius = 1, maxRadius = 50)
+detected_circles = cv2.HoughCircles(edges, cv2.HOUGH_GRADIENT, 1, 20, param1 = 50,  param2 = 21, minRadius = 1, maxRadius = 40)
 
 #Draw the circles that have been detected
 if detected_circles is not None:
