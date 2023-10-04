@@ -69,5 +69,7 @@ print(detected_circles.size/3)
 
 # Sources
 https://www.geeksforgeeks.org/python-opencv-cv2-blur-method/
+
 https://thepythoncode.com/article/canny-edge-detection-opencv-python?utm_content=cmp-true
+
 https://docs.opencv.org/4.x/d4/d13/tutorial_py_filtering.html
