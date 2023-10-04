@@ -10,7 +10,7 @@ import cv2
 import numpy as np
 ```
 
-# Import image
+## Import image
 <p>Next you need to import the image. On the place where is written "link to image" you need to place the path to the image.<br>
 Also we have to convert the image from BGR to gray.</p>
 
@@ -18,3 +18,13 @@ Also we have to convert the image from BGR to gray.</p>
 img = cv2.imread("link to image")
 grayImage = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 ```
+
+## Image blur
+<p>To reduce the noise on the image, the image need to be blurred. For this we use a GaussianBlur filter.</p>
+
+```py
+kernel_size = (15, 15)
+blur = cv2.GaussianBlur(grayImage, kernel_size, 0)
+cv2.imshow("Gausian", blur)
+```
+
